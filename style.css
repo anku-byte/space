@@ -1,0 +1,107 @@
+
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+    body {
+      background: linear-gradient(270deg, #000010, #001020, #000010);
+      background-size: 600% 600%;
+      animation: bgAnimation 15s ease infinite;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 { color: #00eaff; margin: 20px 0; position: relative; z-index: 2; }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00eaff70, 0 0 50px #00eaff30;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 60px;
+      backdrop-filter: blur(6px);
+    }
+
+    input {
+      width: 85%;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 6px;
+      border: 2px solid #00eaff;
+      background: #111;
+      color: #0ff;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    button {
+      background: #00eaff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      margin: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    button:hover { background: #0ff; transform: scale(1.05); }
+
+    img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-top: 10px;
+      border: 2px solid #00eaff;
+      box-shadow: 0 0 15px #00eaff60;
+    }
+
+    #story {
+      margin-top: 18px;
+      font-size: 18px;
+      line-height: 1.6;
+      white-space: pre-line;
+      text-align: left;
+      padding: 12px;
+    }
+
+    /* Stars */
+    .star {
+      position: absolute;
+      background: white;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+
+    /* Shooting stars */
+    .shooting-star {
+      position: absolute;
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(white, transparent);
+      transform: rotate(45deg);
+      animation: shoot 2s linear infinite;
+    }
+    @keyframes shoot {
+      from { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 1; }
+      to { transform: translateX(100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+    }
